@@ -36,7 +36,7 @@ public class AddressServiceImpl implements AddressService {
         log.info("Fetching User from DB with mail : "+mail);
         User user= userRepository.findByEmail(mail)
                 .orElseThrow(
-                        ()-> new UserNotFoundException("User not found with mail : "+ mail));
+                        ()-> new UserNotFoundException("User not found with mail : "+mail));
         log.info("User fetched successfully from DB with mail : "+mail);
 
         List<Address> address=user.getAddresses();
