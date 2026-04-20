@@ -15,9 +15,12 @@ public interface UserService {
     //Finding User by UserEmail
     UserResponse getUserByEmail(String mail);
 
+    //Fetching all user
     List<UserResponse> getAllUsers();
 
+    //Updating User
     UserResponse updateUser(String mail,UserRequest userRequest);
 
+    //Deleting user
     String deleteUser(String mail);
 }
